@@ -10,7 +10,7 @@ function Splashpage({ imgSrc }: SplashpageProps): JSX.Element {
     <div className={styles.splash}>
       <main>
         <h1 className={styles.splash__heading}>TrackStack</h1>
-        <img className={styles.splash__logo} src={imgSrc} alt="" />
+        <img className={styles.splash__container_logo} src={imgSrc} alt="" />
       </main>
     </div>
   );
