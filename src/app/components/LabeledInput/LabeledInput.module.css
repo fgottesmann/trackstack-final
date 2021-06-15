@@ -1,0 +1,30 @@
+.label {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  display: grid;
+  gap: 0.7em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.label__input {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 0.8em 1.5em;
+  border-radius: 1.9em;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.2em;
+  border: 2px solid var(--text-color);
+}
+
+.label__input::placeholder {
+  color: var(--hint-color);
+  font-family: var(--font-family);
+  text-transform: lowercase;
+}
+
+.label__input:focus {
+  outline: none;
+}
