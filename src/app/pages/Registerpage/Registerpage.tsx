@@ -72,10 +72,9 @@ function RegisterForm(): JSX.Element {
             onChange={setConfirmPassword}
             required
           />
-
-          <Button>Register</Button>
         </form>
       </main>
+      <Button>Register</Button>
     </div>
   );
 }
