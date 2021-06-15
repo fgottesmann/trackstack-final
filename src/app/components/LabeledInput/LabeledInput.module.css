@@ -16,7 +16,9 @@
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 1.2em;
-  border: 2px solid var(--text-color);
+  border: 1px solid var(--text-color);
+  -webkit-box-shadow: 0 -1px 1px 1px #a5a4a4;
+  box-shadow: 0 -1px 8px 1px #686767;
 }
 
 .label__input::placeholder {
