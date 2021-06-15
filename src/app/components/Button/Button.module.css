@@ -1,9 +1,16 @@
 .button {
-  color: #000;
-  background: linear-gradient(180deg, #ffbb3b, #ffa90a);
-  font-size: 0.8em;
+  font-family: var(--font-family);
+  color: var(--background-color);
+  background: var(--primary-color);
+  font-size: 0.9em;
+  font-weight: 600;
   padding: 0.8em 2em;
   border: none;
-  border-radius: 0.4em;
+  border-radius: 1.6em;
   text-transform: uppercase;
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0 0 5px 2px #f8dd5a;
+  box-shadow: 0 0 5px 2px #f8dd5a;
 }
