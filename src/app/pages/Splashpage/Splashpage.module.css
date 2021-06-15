@@ -25,6 +25,7 @@
 .splash__heading {
   color: var(--text-color);
   font-weight: 400;
+  font-size: 3em;
   text-align: center;
   text-shadow: 0 0 20px rgba(248, 221, 90, 20);
   padding-top: 2em;
