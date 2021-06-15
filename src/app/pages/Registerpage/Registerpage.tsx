@@ -66,7 +66,7 @@ function RegisterForm(): JSX.Element {
 
           <LabeledInput
             label="Confirm Password"
-            placeholder="Confirm Password"
+            placeholder="Password again"
             type="password"
             value={confirmPassword}
             onChange={setConfirmPassword}
