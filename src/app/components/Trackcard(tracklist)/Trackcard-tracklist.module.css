@@ -1,0 +1,55 @@
+.trackcard {
+  border-radius: 100px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  box-shadow: -3px -3px 6px var(--text-color);
+  max-width: 95%;
+  max-height: 12rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'cardimage cardimage title title title likebutton likebutton'
+    'cardimage cardimage artist artist artist likebutton likebutton';
+}
+.cardimage {
+  grid-area: cardimage;
+  width: 100%;
+  height: 98%;
+  border: 2px solid var(--primary-color);
+  border-radius: 100px;
+  object-fit: cover;
+  box-shadow: -3px -3px 6px var(--primary-color);
+}
+.title {
+  grid-area: title;
+  color: var(--text-color);
+  padding-left: 0.55em;
+  font-size: 45pt;
+  padding-top: 0;
+  margin: 1px;
+  letter-spacing: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.artist {
+  grid-area: artist;
+  color: var(--text-color);
+  padding-left: 0.7em;
+  font-size: 38pt;
+  margin: 1px;
+  letter-spacing: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.likebutton {
+  grid-area: likebutton;
+  background-color: transparent;
+  height: 50px;
+  width: 65px;
+  border: none;
+  margin-top: 5em;
+  padding-left: 40%;
+}

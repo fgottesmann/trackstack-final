@@ -16,6 +16,7 @@ code {
 :root {
   --primary-color: #ec9e17;
   --secondary-color: #f8dd5a;
+  --border-color: #707070;
   --text-color: #d6d6d6;
   --background-color: #2e2d2c;
   --font-family: 'Roboto', sans-serif;
