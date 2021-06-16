@@ -8,13 +8,14 @@
 }
 
 .registerForm__form {
-  grid-row-gap: 2.2em;
+  grid-row-gap: 2em;
   display: grid;
 }
 
 .registerForm__main {
   grid-row: 2;
   grid-row-gap: 1em;
+  margin-bottom: 3.5em;
 }
 
 .registerForm__header {
@@ -29,11 +30,15 @@
   padding-bottom: 10%;
 }
 
+.registerForm::-webkit-scrollbar {
+  display: none;
+}
+
 .registerForm:focus {
   outline: none;
 }
 
 .registerForm__logo {
   max-width: 12em;
-  margin: auto;
+  place-self: center;
 }

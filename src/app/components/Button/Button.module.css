@@ -8,9 +8,6 @@
   border: none;
   border-radius: 1.6em;
   text-transform: uppercase;
-  width: 20em;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-shadow: 0 0 5px 2px #f8dd5a;
+  width: 100%;
   box-shadow: 0 0 5px 2px #f8dd5a;
 }
