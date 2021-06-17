@@ -6,7 +6,7 @@ export type LikebuttonProps = {
   id: string;
 };
 
-function Likebutton({ id }: LikebuttonProps) {
+function Likebutton({ id }: LikebuttonProps): JSX.Element {
   const [isLiked, setIsLiked] = useState(
     localStorage.getItem('favoriteSong') === id
   );
