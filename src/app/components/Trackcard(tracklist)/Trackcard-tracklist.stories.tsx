@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Props } from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import Cards, { Props } from './Trackcard-tracklist';
+import Cards from './Trackcard-tracklist';
 
 export default {
   title: 'Component/Cards',
