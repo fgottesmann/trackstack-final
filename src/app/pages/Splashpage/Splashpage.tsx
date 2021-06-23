@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Splashpage.module.css';
 
 type SplashpageProps = {
-  imgSrc: string;
+  imgSrc?: string;
 };
 
 function Splashpage({ imgSrc }: SplashpageProps): JSX.Element {
