@@ -2,6 +2,7 @@
   align-items: center;
   display: flex;
   width: 700px;
+  background-color: var(--background-color);
 }
 
 .forwardBackward {
@@ -22,8 +23,8 @@
   background-color: var(--primary-color);
   border: none;
   border-radius: 50px;
-  height: 75px;
-  width: 75px;
+  height: 55px;
+  width: 55px;
   font-size: 2em;
   color: var(--background-color);
   justify-content: center;
@@ -33,6 +34,7 @@
 .play {
   position: relative;
   left: 5px;
+  top: 3.4px;
 }
 
 .currentTime,

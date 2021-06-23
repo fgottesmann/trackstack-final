@@ -81,13 +81,13 @@ const Waveplayer = (): JSX.Element => {
     }
   };
 
-  // const backThirty = () => {
-  //   progressBar.current.value = Number(progressBar.current.value - 30);
-  // };
+  const backThirty = () => {
+    progressBar.current.value = Number(progressBar.current.value - 30);
+  };
 
-  // const forwardThirty = () => {
-  //   progressBar.current.value = Number(progressBar.current.value + 30);
-  // };
+  const forwardThirty = () => {
+    progressBar.current.value = Number(progressBar.current.value + 30);
+  };
 
   return (
     <div className={styles.waveplayer}>
