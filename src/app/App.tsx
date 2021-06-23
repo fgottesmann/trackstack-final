@@ -1,44 +1,29 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import styles from './App.module.css';
+import { BrowserRouter, Route, RouteProps, Switch } from 'react-router-dom';
+import RegisterPage from './pages/Registerpage/Registerpage';
+import Splashpage from './pages/Splashpage/Splashpage';
+
+type CustomRouteProps = RouteProps & {
+  Component: () => JSX.Element;
+  path: string;
+};
+
+const routes: CustomRouteProps[] = [
+  { path: '/Registerpage', Component: RegisterPage },
+];
 
 function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0);
   return (
-    <div className={styles.App}>
-      <header className={styles['App-header']}>
-        <img src={logo} className={styles['App-logo']} alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className={styles['App-link']}
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className={styles['App-link']}
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        {routes.map(({ Component, ...routeProps }) => (
+          <Route key={routeProps.path} {...routeProps}>
+            <Component />
+          </Route>
+        ))}
+      </Switch>
+    </BrowserRouter>
   );
 }
-
 export default App;
