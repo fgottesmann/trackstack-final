@@ -97,18 +97,18 @@ const Waveplayer = (): JSX.Element => {
     <div className={styles.waveplayer}>
       <audio
         ref={audioPlayer}
-        src="src/app/assets/LilPeep_Star_Shopping.mp3"
+        src="src/app/assets/comples.mp3"
         preload="metadata"
         onLoadedData={loadedAudio}
       />
       <button className={styles.forwardBackward} onClick={backThirty}>
-        <BsArrowLeftShort /> 30
+        <img src="backward.svg" />
       </button>
       <button className={styles.playPause} onClick={togglePlayPause}>
-        {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
+        <img src={isPlaying ? '/pausebutton.svg' : '/playbutton.svg'} />
       </button>
       <button className={styles.forwardBackward} onClick={forwardThirty}>
-        <BsArrowRightShort /> 30
+        <img src="/forward.svg" />
       </button>
 
       {/* current time */}
