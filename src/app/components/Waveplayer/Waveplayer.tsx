@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, RefObject } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './Waveplayer.module.css';
 import { BsArrowLeftShort } from 'react-icons/bs';
 import { BsArrowRightShort } from 'react-icons/bs';
@@ -12,9 +12,9 @@ const Waveplayer = (): JSX.Element => {
   const [currentTime, setCurrentTime] = useState(0);
 
   //references
-  const audioPlayer = useRef<HTMLAudioElement>(null);
-  const progressBar = useRef<HTMLInputElement>(null);
-  const animationRef = useRef<number>(null);
+  const audioPlayer = useRef<HTMLAudioElement | null>(null);
+  const progressBar = useRef<HTMLInputElement | null>(null);
+  const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!isPlaying) {
@@ -81,13 +81,17 @@ const Waveplayer = (): JSX.Element => {
     }
   };
 
-  // const backThirty = () => {
-  //   progressBar.current.value = Number(progressBar.current.value - 30);
-  // };
+  const backThirty = () => {
+    if (progressBar.current) {
+      progressBar.current.value = String(+progressBar.current.value - 30);
+    }
+  };
 
-  // const forwardThirty = () => {
-  //   progressBar.current.value = Number(progressBar.current.value + 30);
-  // };
+  const forwardThirty = () => {
+    if (progressBar.current) {
+      progressBar.current.value = String(progressBar.current.value + 30);
+    }
+  };
 
   return (
     <div className={styles.waveplayer}>
