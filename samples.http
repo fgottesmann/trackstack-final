@@ -1,0 +1,10 @@
+@port = {{$dotenv PORT}}
+@baseUrl = http://localhost:{{port}}
+
+
+### Get track by id
+GET {{baseUrl}}/api/tracks/Rockstar
+
+
+### Get track by id
+GET {{baseUrl}}/api/tracks/Kartoffel
