@@ -20,12 +20,11 @@
 }
 
 .playPause {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   border: none;
   border-radius: 50px;
   height: 55px;
   width: 55px;
-  font-size: 2em;
   color: var(--background-color);
   justify-content: center;
   align-items: center;
