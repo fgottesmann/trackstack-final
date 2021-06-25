@@ -1,9 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Waveplayer.module.css';
-import { BsArrowLeftShort } from 'react-icons/bs';
-import { BsArrowRightShort } from 'react-icons/bs';
-import { FaPlay } from 'react-icons/fa';
-import { FaPause } from 'react-icons/fa';
 
 const Waveplayer = (): JSX.Element => {
   // state
