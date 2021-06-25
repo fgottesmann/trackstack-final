@@ -1,18 +1,21 @@
-.waveplayer {
-  align-items: center;
+.wavePlayer {
   display: flex;
-  width: 700px;
-  background-color: var(--background-color);
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
 }
 
 .forwardBackward {
   background: none;
   border: none;
-  display: flex;
-  align-items: center;
   font-family: var(--font-family);
   font-size: 1em;
   cursor: pointer;
+  margin: auto;
 }
 
 .forwardBackward:hover {
@@ -22,43 +25,36 @@
 .playPause {
   background-color: var(--background-color);
   border: none;
-  border-radius: 50px;
-  height: 55px;
-  width: 55px;
-  color: var(--background-color);
   justify-content: center;
   align-items: center;
-}
-
-.play {
-  position: relative;
-  left: 5px;
-  top: 3.4px;
 }
 
 .currentTime,
 .duration {
   font-family: var(--font-family);
-  font-size: 1em;
+  font-size: 0.7em;
 }
 
 .currentTime {
-  margin-left: 25px;
+  margin-right: auto;
+  margin-left: 0.3em;
+}
+
+.duration {
+  margin-left: auto;
+  margin-right: 0.3em;
 }
 
 .progressBar {
   --bar-bg: var(--primary-color);
-  --seek-before-width: 0;
   --seek-before-color: var(--text-color);
-  --knobby: var(--primary-color);
-  --selectedKnobby: var(--text-color);
 
   appearance: none;
   background: var(--border-color);
   border-radius: 10px;
   position: relative;
-  width: 100%;
-  height: 11px;
+  width: 63vw;
+  height: 0.8em;
   outline: none;
 }
 
@@ -69,10 +65,10 @@
 .progressBar::before {
   content: '';
   height: 11px;
-  width: var(--seek-before-width);
+  width: 0;
   background-color: var(--seek-before-color);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
   position: absolute;
   top: 0;
   left: 0;
@@ -82,11 +78,11 @@
 
 .progressBar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 15px;
-  width: 15px;
+  height: 1.2em;
+  width: 1.2em;
   border-radius: 50%;
   border: none;
-  background-color: var(--knobby);
+  background-color: var(--primary-color);
   cursor: pointer;
   position: relative;
   margin: -2px 0 0 0;
@@ -96,5 +92,6 @@
 
 .progressBar:active::-webkit-slider-thumb {
   transform: scale(1.2);
-  background: var(--selectedKnobby);
+  background: var(--background-color);
+  border: 1px solid var(--primary-color);
 }
