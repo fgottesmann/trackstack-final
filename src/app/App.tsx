@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import styles from './App.module.css';
+import React from 'react';
 import { BrowserRouter, Route, RouteProps, Switch } from 'react-router-dom';
 import RegisterPage from './pages/Registerpage/Registerpage';
-import Splashpage from './pages/Splashpage/Splashpage';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
