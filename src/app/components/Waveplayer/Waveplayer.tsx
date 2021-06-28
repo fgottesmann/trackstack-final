@@ -1,9 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Waveplayer.module.css';
-import { BsArrowLeftShort } from 'react-icons/bs';
-import { BsArrowRightShort } from 'react-icons/bs';
-import { FaPlay } from 'react-icons/fa';
-import { FaPause } from 'react-icons/fa';
 
 const Waveplayer = (): JSX.Element => {
   // state
@@ -94,40 +90,42 @@ const Waveplayer = (): JSX.Element => {
   };
 
   return (
-    <div className={styles.waveplayer}>
-      <audio
-        ref={audioPlayer}
-        src="src/app/assets/LilPeep_Star_Shopping.mp3"
-        preload="metadata"
-        onLoadedData={loadedAudio}
-      />
-      <button className={styles.forwardBackward} onClick={backThirty}>
-        <BsArrowLeftShort /> 30
-      </button>
-      <button className={styles.playPause} onClick={togglePlayPause}>
-        {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
-      </button>
-      <button className={styles.forwardBackward} onClick={forwardThirty}>
-        <BsArrowRightShort /> 30
-      </button>
-
-      {/* current time */}
-      <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
-
-      {/* progress bar */}
-      <div>
-        <input
-          className={styles.progressBar}
-          defaultValue="0"
-          ref={progressBar}
-          type="range"
-          onChange={changeRange}
+    <div className={styles.musicPlayer}>
+      <div className={styles.wavePlayer}>
+        <audio
+          ref={audioPlayer}
+          src="src/app/assets/comples.mp3"
+          preload="metadata"
+          onLoadedData={loadedAudio}
         />
+        {/* current time */}
+        <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
+        {/* progress bar */}
+        <div>
+          <input
+            className={styles.progressBar}
+            defaultValue="0"
+            ref={progressBar}
+            type="range"
+            onChange={changeRange}
+          />
+        </div>
+        {/* duration */}
+        <div className={styles.duration}>
+          {duration && !isNaN(duration) && calculateTime(duration)}
+        </div>
       </div>
 
-      {/* duration */}
-      <div className={styles.duration}>
-        {duration && !isNaN(duration) && calculateTime(duration)}
+      <div className={styles.controls}>
+        <button className={styles.forwardBackward} onClick={backThirty}>
+          <img src="backward.svg" />
+        </button>
+        <button className={styles.playPause} onClick={togglePlayPause}>
+          <img src={isPlaying ? '/pausebutton.svg' : '/playbutton.svg'} />
+        </button>
+        <button className={styles.forwardBackward} onClick={forwardThirty}>
+          <img src="/forward.svg" />
+        </button>
       </div>
     </div>
   );
