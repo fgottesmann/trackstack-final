@@ -3,8 +3,11 @@
 
 
 ### Get track by id
-GET {{baseUrl}}/api/tracks/Rockstar
+GET {{baseUrl}}/api/tracks/comples
 
 
 ### Get track by id
 GET {{baseUrl}}/api/tracks/Kartoffel
+
+### Get tracks
+GET {{baseUrl}}/api/tracks

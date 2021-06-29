@@ -1,12 +1,16 @@
 import express from 'express';
-import { findTrack } from './tracks';
+import { findTrack, findTracks } from './tracks';
 
 const router = express.Router();
+router.get('/tracks', async (_req, res) => {
+  const tracks = await findTracks();
+  res.status(200).json(tracks);
+});
 
-router.get('/tracks/:title', async (req, res, next) => {
+router.get('/tracks/:id', async (req, res, next) => {
   try {
-    const { title } = req.params;
-    const track = await findTrack({ title });
+    const { id } = req.params;
+    const track = await findTrack({ id });
     if (!track) {
       res.status(404).send('Track not found');
       return;
