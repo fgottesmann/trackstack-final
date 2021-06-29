@@ -2,9 +2,11 @@ import { ObjectId } from 'bson';
 
 export type Track = {
   _id?: ObjectId;
+  id: string;
   title: string;
   artist: string;
-  albumCover: string | null;
+  imgSrc?: string;
+  url: string;
 };
 
 export type Users = {
