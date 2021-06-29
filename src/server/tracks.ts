@@ -9,3 +9,7 @@ function getTrackCollection(): Collection<Track> {
 export async function findTrack(track: Partial<Track>): Promise<Track | null> {
   return await getTrackCollection().findOne(track);
 }
+
+export async function findTracks(): Promise<Track[]> {
+  return await getTrackCollection().find().toArray();
+}
