@@ -1,5 +1,5 @@
 import React from 'react';
-import Trackpage from './Trackpage';
+import Trackpage from './Trackpageedge';
 
 export default {
   title: 'Pages/Trackpage',
