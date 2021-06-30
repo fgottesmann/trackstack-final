@@ -29,6 +29,6 @@ if (process.env.MONGO_URL === undefined) {
 connectMongoClient().then(() => {
   console.log('Database connected');
   app.listen(PORT, () => {
-    console.log(`Server listening at http://localhost:${PORT}}`);
+    console.log(`Server listening at http://localhost:${PORT}`);
   });
 });
