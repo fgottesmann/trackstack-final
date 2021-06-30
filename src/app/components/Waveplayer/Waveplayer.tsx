@@ -9,8 +9,6 @@ const Waveplayer = (): JSX.Element => {
 
   //references
   const audioPlayer = useRef<HTMLAudioElement | null>(null);
-  const progressBar = useRef<HTMLInputElement | null>(null);
-  const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!isPlaying) {
@@ -27,10 +25,9 @@ const Waveplayer = (): JSX.Element => {
   }, [audioPlayer.current, isPlaying]);
 
   const loadedAudio = () => {
-    if (audioPlayer.current && progressBar.current) {
+    if (audioPlayer.current) {
       const seconds = Math.floor(audioPlayer.current.duration);
       setDuration(seconds);
-      progressBar.current.max = seconds.toString();
     }
   };
 
@@ -46,47 +43,25 @@ const Waveplayer = (): JSX.Element => {
       setIsPlaying(!isPlaying);
       if (!isPlaying) {
         audioPlayer.current.play();
-        animationRef.current = requestAnimationFrame(whilePlaying);
-      } else if (animationRef.current) {
+      } else {
         audioPlayer.current.pause();
-        cancelAnimationFrame(animationRef.current);
       }
     }
   };
 
-  const whilePlaying = () => {
-    if (progressBar.current && audioPlayer.current) {
-      progressBar.current.value = audioPlayer.current.currentTime.toString();
-      changePlayerCurrentTime();
-    }
-  };
-
-  const changeRange = () => {
-    if (audioPlayer.current && progressBar.current)
-      audioPlayer.current.currentTime = +progressBar.current.value;
-    changePlayerCurrentTime();
-  };
-
-  const changePlayerCurrentTime = () => {
-    if (progressBar.current) {
-      progressBar.current.style.setProperty(
-        '--seek-before.width',
-        `${(+progressBar.current.value / duration) * 100} %`
-      );
-      setCurrentTime(+progressBar.current.value);
+  const changeRange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (audioPlayer.current) {
+      audioPlayer.current.currentTime = +event.target.value;
+      setCurrentTime(audioPlayer.current.currentTime);
     }
   };
 
   const backThirty = () => {
-    if (progressBar.current) {
-      progressBar.current.value = String(+progressBar.current.value - 30);
-    }
+    //
   };
 
   const forwardThirty = () => {
-    if (progressBar.current) {
-      progressBar.current.value = String(progressBar.current.value + 30);
-    }
+    //
   };
 
   return (
@@ -94,22 +69,23 @@ const Waveplayer = (): JSX.Element => {
       <div className={styles.wavePlayer}>
         <audio
           ref={audioPlayer}
-          src="src/app/assets/comples.mp3"
+          src="/edge.wav"
           preload="metadata"
           onLoadedData={loadedAudio}
         />
         {/* current time */}
         <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
         {/* progress bar */}
-        <div>
-          <input
-            className={styles.progressBar}
-            defaultValue="0"
-            ref={progressBar}
-            type="range"
-            onChange={changeRange}
-          />
-        </div>
+
+        <input
+          className={styles.progressBar}
+          defaultValue="0"
+          value={currentTime}
+          max={duration}
+          type="range"
+          onChange={changeRange}
+        />
+
         {/* duration */}
         <div className={styles.duration}>
           {duration && !isNaN(duration) && calculateTime(duration)}
@@ -118,7 +94,7 @@ const Waveplayer = (): JSX.Element => {
 
       <div className={styles.controls}>
         <button className={styles.forwardBackward} onClick={backThirty}>
-          <img src="backward.svg" />
+          <img src="/backward.svg" />
         </button>
         <button className={styles.playPause} onClick={togglePlayPause}>
           <img src={isPlaying ? '/pausebutton.svg' : '/playbutton.svg'} />

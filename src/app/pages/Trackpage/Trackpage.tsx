@@ -1,28 +1,31 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import Backbutton from '../../components/Backbutton/Backbutton';
+import { Waveplayer } from '../../components/Waveplayer/Waveplayer';
 import styles from './Trackpage.module.css';
+import { Track } from '../../../types';
+import useFetch from '../../hooks/useFetch';
 
-type Props = {
-  imgSrc: string;
-  title: string;
-  artist: string;
-};
+export default function Trackpage(): JSX.Element {
+  const { id } = useParams<{ id: string }>();
 
-export default function Trackpage({
-  imgSrc,
-  title,
-  artist,
-}: Props): JSX.Element {
+  const { data: track, isLoading } = useFetch<Track>(`/api/tracks/${id}`);
+
+  if (!track || isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className={styles.container}>
-      <li className={styles.trackItem}>
-        <img className={styles.img} src={imgSrc} alt="" />
-        <div title={title} className={styles.title}>
-          {title}
-        </div>
-        <div title={artist} className={styles.artist}>
-          {artist}
-        </div>
-      </li>
+      <div className={styles.backbutton}>
+        <Backbutton />
+      </div>
+      <img className={styles.img} src={track.imgSrc} alt="" />
+      <div className={styles.title}>{track.title}</div>
+      <div className={styles.artist}>{track.artist}</div>
+      <div className={styles.waveplayer}>
+        <Waveplayer />
+      </div>
     </div>
   );
 }

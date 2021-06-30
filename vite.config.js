@@ -17,4 +17,5 @@ export default defineConfig({
       },
     },
   },
+  publicDir: 'src/app/assets',
 });

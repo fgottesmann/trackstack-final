@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, RouteProps, Switch } from 'react-router-dom';
 import RegisterPage from './pages/Registerpage/Registerpage';
+import Splashpage from './pages/Splashpage/Splashpage';
+import Trackpage from './pages/Trackpage/Trackpage';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -8,7 +10,9 @@ type CustomRouteProps = RouteProps & {
 };
 
 const routes: CustomRouteProps[] = [
-  { path: '/Registerpage', Component: RegisterPage },
+  { path: '/tracks/:id', Component: Trackpage },
+  { path: '/register', Component: RegisterPage },
+  { path: '/', Component: Splashpage },
 ];
 
 function App(): JSX.Element {

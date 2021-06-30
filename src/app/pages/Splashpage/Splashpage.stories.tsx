@@ -8,6 +8,4 @@ export default {
     layout: 'fullscreen',
   },
 };
-export const Default = (): JSX.Element => (
-  <Splashpage imgSrc="/TrackStack-logo-main.svg" />
-);
+export const Default = (): JSX.Element => <Splashpage />;

@@ -8,7 +8,7 @@ export default function Backbutton(): JSX.Element {
   return (
     <div>
       <a className={styles.backButton} onClick={goBack}>
-        <img src="src/app/assets/backbutton.svg" />
+        <img src="/backbutton.svg" />
       </a>
     </div>
   );
