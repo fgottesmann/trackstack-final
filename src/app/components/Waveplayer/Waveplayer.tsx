@@ -94,7 +94,7 @@ const Waveplayer = (): JSX.Element => {
       <div className={styles.wavePlayer}>
         <audio
           ref={audioPlayer}
-          src="src/app/assets/comples.mp3"
+          src="edge.wav"
           preload="metadata"
           onLoadedData={loadedAudio}
         />
