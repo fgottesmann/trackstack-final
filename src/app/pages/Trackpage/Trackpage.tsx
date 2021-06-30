@@ -21,10 +21,10 @@ export default function Trackpage({
       </div>
       <img className={styles.img} src={imgSrc} alt="" />
       <div title={title} className={styles.title}>
-        {title}
+        EDGE
       </div>
       <div title={artist} className={styles.artist}>
-        {artist}
+        Lucas Meyer
       </div>
       <div className={styles.waveplayer}>
         <Waveplayer />
