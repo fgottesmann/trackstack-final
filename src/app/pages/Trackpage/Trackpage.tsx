@@ -1,4 +1,6 @@
 import React from 'react';
+import Backbutton from '../../components/Backbutton/Backbutton';
+import { Waveplayer } from '../../components/Waveplayer/Waveplayer';
 import styles from './Trackpage.module.css';
 
 type Props = {
@@ -14,15 +16,19 @@ export default function Trackpage({
 }: Props): JSX.Element {
   return (
     <div className={styles.container}>
-      <li className={styles.trackItem}>
-        <img className={styles.img} src={imgSrc} alt="" />
-        <div title={title} className={styles.title}>
-          {title}
-        </div>
-        <div title={artist} className={styles.artist}>
-          {artist}
-        </div>
-      </li>
+      <div className={styles.backbutton}>
+        <Backbutton />
+      </div>
+      <img className={styles.img} src={imgSrc} alt="" />
+      <div title={title} className={styles.title}>
+        {title}
+      </div>
+      <div title={artist} className={styles.artist}>
+        {artist}
+      </div>
+      <div className={styles.waveplayer}>
+        <Waveplayer />
+      </div>
     </div>
   );
 }

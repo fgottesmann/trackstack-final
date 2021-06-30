@@ -3,11 +3,13 @@ import Trackpage from './Trackpage';
 
 export default {
   title: 'Pages/Trackpage',
-  parameter: {
+  parameters: {
     layout: 'fullscreen',
   },
 };
 
 export const TrackPage = (): JSX.Element => (
-  <Trackpage imgSrc="imgSrc" title="title" artist="artist" />
+  <div>
+    <Trackpage imgSrc="/edgeimg.jpg" title="EDGE" artist="Lucas Meyer" />
+  </div>
 );
