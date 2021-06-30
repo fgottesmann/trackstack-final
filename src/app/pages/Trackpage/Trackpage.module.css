@@ -1,3 +1,45 @@
 .container {
-  border: 1px solid white;
+  overflow: auto;
+  position: relative;
+  height: 100vh;
+}
+.img {
+  height: 78vh;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 1em;
+  box-shadow: inset 0 0 1em 1em var(--background-color);
+}
+.title {
+  z-index: 2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 2.5em;
+  text-shadow: 5px 0 2px #000;
+}
+
+.artist {
+  z-index: 2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  font-size: 2em;
+  text-shadow: 5px 0 2px #000;
+}
+.waveplayer {
+  box-shadow: 0 -10px 15px 5px #2e2d2c;
+}
+
+.backbutton {
+  z-index: 2;
+  position: absolute;
+  top: 3%;
+  left: 5%;
 }
