@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Track } from '../../../types';
 import { Trackcard } from '../../components/Trackcard(tracklist)/Trackcard-tracklist.stories';
+import styles from './Tracklist.module.css';
 
 function Tracklist(): JSX.Element {
   const [tracks, setTracks] = useState<Track[]>();
@@ -17,8 +18,8 @@ function Tracklist(): JSX.Element {
   }
   const trackcards = tracks.map(
     ({ id, imgSrc, title, artist }: Track): JSX.Element => (
-      <div>
-        <Trackcard key={id} imgSrc={imgSrc} title={title} artist={artist} />
+      <div className={styles.trackcard}>
+        <Trackcard id={id} imgSrc={imgSrc} title={title} artist={artist} />
       </div>
     )
   );
