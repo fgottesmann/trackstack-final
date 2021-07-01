@@ -6,4 +6,4 @@ export default {
   component: Waveplayer,
 };
 
-export const Audioplayer = (): JSX.Element => <Waveplayer />;
+export const Audioplayer = (): JSX.Element => <Waveplayer trackSrc="" />;
