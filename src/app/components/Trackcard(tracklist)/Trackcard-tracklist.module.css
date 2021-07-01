@@ -2,7 +2,7 @@
   border-radius: 5em;
   border: 0.1em solid var(--border-color);
   background-color: var(--background-color);
-  box-shadow: -0.3em -0.3em 0.5em var(--text-color);
+  box-shadow: 0 -0.1em 0.3em var(--text-color);
   max-width: 95%;
   max-height: 3.5rem;
   display: grid;
@@ -18,12 +18,13 @@
   height: 99%;
   border-radius: 5em;
   object-fit: cover;
+  box-shadow: 0 0 0.7em var(--primary-color);
 }
 .title {
   grid-area: title;
   color: var(--text-color);
   padding-left: 0.55em;
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding-top: 0;
   margin: 1px;
   letter-spacing: 0.03em;
@@ -35,7 +36,7 @@
   grid-area: artist;
   color: var(--text-color);
   padding-left: 0.7em;
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 1px;
   letter-spacing: 0.02em;
   text-overflow: ellipsis;
