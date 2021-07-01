@@ -1,7 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Waveplayer.module.css';
 
-const Waveplayer = (): JSX.Element => {
+export type WaveplayerProps = {
+  trackSrc: string;
+};
+
+const Waveplayer = ({ trackSrc }: WaveplayerProps): JSX.Element => {
   // state
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -69,7 +73,7 @@ const Waveplayer = (): JSX.Element => {
       <div className={styles.wavePlayer}>
         <audio
           ref={audioPlayer}
-          src="/tracks/:id"
+          src={trackSrc}
           preload="metadata"
           onLoadedData={loadedAudio}
         />

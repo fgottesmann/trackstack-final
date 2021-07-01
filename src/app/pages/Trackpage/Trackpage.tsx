@@ -24,7 +24,7 @@ export default function Trackpage(): JSX.Element {
       <div className={styles.title}>{track.title}</div>
       <div className={styles.artist}>{track.artist}</div>
       <div className={styles.waveplayer}>
-        <Waveplayer />
+        <Waveplayer trackSrc={track.url} />
       </div>
     </div>
   );
