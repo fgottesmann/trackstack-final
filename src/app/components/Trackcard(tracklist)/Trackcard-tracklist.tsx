@@ -18,9 +18,9 @@ function Trackcard({ title, artist, imgSrc, id }: TrackcardProps): JSX.Element {
         <img className={styles.cardimage} src={imgSrc} />
         <h3 className={styles.title}>{title}</h3>
         <h4 className={styles.artist}>{artist}</h4>
-        <button className={styles.likebutton}>
+        <div className={styles.likebutton}>
           <Likebutton id={'id'} />
-        </button>
+        </div>
       </div>
     </Link>
   );
