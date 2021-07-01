@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, RouteProps, Switch } from 'react-router-dom';
 import RegisterPage from './pages/Registerpage/Registerpage';
 import Splashpage from './pages/Splashpage/Splashpage';
+import Tracklist from './pages/Tracklist/Tracklist';
 import Trackpage from './pages/Trackpage/Trackpage';
 
 type CustomRouteProps = RouteProps & {
@@ -12,6 +13,7 @@ type CustomRouteProps = RouteProps & {
 const routes: CustomRouteProps[] = [
   { path: '/tracks/:id', Component: Trackpage },
   { path: '/register', Component: RegisterPage },
+  { path: '/tracklist', Component: Tracklist },
   { path: '/', Component: Splashpage },
 ];
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+
+import LikebuttonIcon from '../icons/LikebuttonIcon';
 import styles from './Likebutton.module.css';
 
 export type LikebuttonProps = {
@@ -25,7 +27,7 @@ function Likebutton({ id }: LikebuttonProps): JSX.Element {
 
   return (
     <button className={styles.btn} onClick={() => setIsLiked(!isLiked)}>
-      <img src={!isLiked ? '/likebutton.svg' : '/likebuttonactive.svg'} />
+      <LikebuttonIcon active={isLiked} />
     </button>
   );
 }
