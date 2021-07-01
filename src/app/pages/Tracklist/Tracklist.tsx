@@ -16,6 +16,7 @@ function Tracklist(): JSX.Element {
   if (!tracks) {
     return <div>Loading...</div>;
   }
+
   const trackcards = tracks.map(
     ({ id, imgSrc, title, artist }: Track): JSX.Element => (
       <div className={styles.trackcard}>
@@ -26,7 +27,12 @@ function Tracklist(): JSX.Element {
 
   return (
     <>
-      <div>{trackcards}</div>
+      <div>
+        <div className={styles.pulseImg}>
+          <img className={styles.topImg} src="/topImg.jpg" />
+        </div>
+      </div>
+      <div className={styles.cardContainer}>{trackcards}</div>
     </>
   );
 }
