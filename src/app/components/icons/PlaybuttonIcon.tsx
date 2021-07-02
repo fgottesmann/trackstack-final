@@ -3,8 +3,8 @@ import React from 'react';
 export default function PlaybuttonIcon(): JSX.Element {
   return (
     <svg
-      width="30pt"
-      height="30pt"
+      width="15pt"
+      height="15pt"
       viewBox="0 0 687 685"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
