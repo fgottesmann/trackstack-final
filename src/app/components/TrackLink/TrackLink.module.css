@@ -1,0 +1,7 @@
+.link {
+  display: grid;
+  place-items: center;
+  width: 4em;
+  height: 4em;
+  background-size: cover;
+}

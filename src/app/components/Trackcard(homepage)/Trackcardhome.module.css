@@ -1,0 +1,9 @@
+.trackcard {
+  border: 1px solid white;
+}
+
+.trackLinks {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+}
