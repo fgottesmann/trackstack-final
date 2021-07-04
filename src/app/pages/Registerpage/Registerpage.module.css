@@ -1,5 +1,7 @@
 .registerForm {
   display: grid;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .registerForm__icon {
@@ -27,7 +29,6 @@
   text-decoration: none;
   color: var(--primary-color);
   margin: auto;
-  padding-bottom: 10%;
 }
 
 .registerForm::-webkit-scrollbar {
@@ -41,4 +42,11 @@
 .registerForm__logo {
   max-width: 12em;
   place-self: center;
+}
+
+.registerLink {
+  justify-content: center;
+  display: grid;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }

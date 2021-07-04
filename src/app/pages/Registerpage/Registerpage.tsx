@@ -75,6 +75,9 @@ function RegisterForm(): JSX.Element {
         </form>
       </main>
       <Button>Register</Button>
+      <a href="http://localhost:3000/login" className={styles.registerLink}>
+        Already have an account?
+      </a>
     </div>
   );
 }
