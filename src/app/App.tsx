@@ -5,6 +5,7 @@ import Splashpage from './pages/Splashpage/Splashpage';
 import Tracklist from './pages/Tracklist/Tracklist';
 import Trackpage from './pages/Trackpage/Trackpage';
 import Homepage from './pages/Homepage/Homepage';
+import Loginpage from './pages/Loginpage/Loginpage';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -13,6 +14,7 @@ type CustomRouteProps = RouteProps & {
 
 const routes: CustomRouteProps[] = [
   { path: '/tracks/:id', Component: Trackpage },
+  { path: '/login', Component: Loginpage },
   { path: '/register', Component: RegisterPage },
   { path: '/tracklist', Component: Tracklist },
   { path: '/home', Component: Homepage },
