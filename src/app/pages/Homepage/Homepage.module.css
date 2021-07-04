@@ -1,4 +1,25 @@
 .trackcardhome {
   display: grid;
   grid-auto-flow: column;
+  box-shadow: 0 0 10px -1px var(--text-color);
+}
+.video {
+  position: absolute;
+  bottom: 0;
+}
+
+.news {
+  display: grid;
+  justify-content: center;
+  margin-left: 1em;
+}
+
+.heading {
+  color: var(--primary-color);
+  display: grid;
+  justify-content: center;
+  text-shadow: 4px 2px 4px #000;
+  font-size: 2em;
+  margin-bottom: 0.7em;
+  margin-top: 0.4em;
 }
