@@ -21,5 +21,14 @@
   text-shadow: 4px 2px 4px #000;
   font-size: 2em;
   margin-bottom: 0.7em;
-  margin-top: 0.4em;
+}
+
+.userName {
+  margin-left: 0.5em;
+  color: var(--text-color);
+  text-shadow: 0.1em 0.1em 0 #000;
+}
+
+.homepage {
+  padding-top: 0.8em;
 }

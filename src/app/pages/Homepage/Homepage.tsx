@@ -7,7 +7,8 @@ import News from '../../components/Tracknews/TrackNews';
 export default function Homepage(): JSX.Element {
   return (
     <div className={styles.homepage}>
-      <a href="http://localhost:3000/tracklist" className={styles.heading}>
+      <span className={styles.userName}>Hello, Fabian!</span>
+      <a href="/tracklist" className={styles.heading}>
         Stack
       </a>
       <div className={styles.trackcardhome}>
