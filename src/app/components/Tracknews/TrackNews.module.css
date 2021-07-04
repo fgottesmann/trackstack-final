@@ -9,7 +9,7 @@
 }
 
 .videoHeader {
-  padding-top: 1em;
+  padding-top: 0.4em;
   padding-left: 2em;
   text-shadow: 1em 1em 0 var(--background-color);
   color: var(--text-color);
