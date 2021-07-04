@@ -4,4 +4,6 @@
   width: 4em;
   height: 4em;
   background-size: cover;
+  box-shadow: 0 0 10px -1px var(--text-color);
+  margin-right: 0.1em;
 }
