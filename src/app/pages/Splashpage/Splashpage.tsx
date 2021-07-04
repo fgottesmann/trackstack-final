@@ -7,8 +7,8 @@ function Splashpage(): JSX.Element {
 
   useEffect(() => {
     setTimeout(() => {
-      history.push('/home');
-    }, 2000);
+      history.push('/register');
+    }, 3000);
   }, []);
   return (
     <div className={styles.splash}>
