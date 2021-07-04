@@ -6,10 +6,10 @@ function VideoPlayer(): JSX.Element {
   return (
     <div className={styles.videoPlayer}>
       <ReactPlayer
-        width="23.3em"
+        width="23.4em"
         height="13em"
         controls
-        url="/Visualizer-Trackstack.mp4"
+        url="https://www.youtube.com/watch?v=brUoG-SVrWws://www.youtube.com/watch?v=brUoG-SVrWw"
       />
     </div>
   );
