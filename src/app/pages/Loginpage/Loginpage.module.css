@@ -1,0 +1,52 @@
+.registerForm {
+  display: grid;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.registerForm__icon {
+  justify-self: center;
+  margin-bottom: 10%;
+}
+
+.registerForm__form {
+  grid-row-gap: 2em;
+  display: grid;
+}
+
+.registerForm__main {
+  grid-row: 2;
+  grid-row-gap: 1em;
+  margin-bottom: 3.5em;
+}
+
+.registerForm__header {
+  margin-top: 7%;
+  display: grid;
+}
+
+.registerForm__link {
+  text-decoration: none;
+  color: var(--primary-color);
+  margin: auto;
+  padding-bottom: 10%;
+}
+
+.registerForm::-webkit-scrollbar {
+  display: none;
+}
+
+.registerForm:focus {
+  outline: none;
+}
+
+.registerForm__logo {
+  max-width: 12em;
+  place-self: center;
+}
+
+.backbutton {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
