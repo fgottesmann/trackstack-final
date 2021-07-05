@@ -52,7 +52,7 @@ function RegisterForm(): JSX.Element {
         </form>
       </main>
       <Link to="/home">
-        <Button> Register</Button>
+        <Button>Login</Button>
       </Link>
     </div>
   );
