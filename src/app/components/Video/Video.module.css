@@ -1,0 +1,4 @@
+.videoPlayer {
+  box-shadow: 0 0 80em 10px var(--primary-color);
+  border: none;
+}

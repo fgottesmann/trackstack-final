@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import styles from './Registerpage.module.css';
+import styles from './Loginpage.module.css';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import Button from '../../components/Button/Button';
+import Backbutton from '../../components/Backbutton/Backbutton';
+import { Link } from 'react-router-dom';
 
 function RegisterForm(): JSX.Element {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`${firstName} submitted`);
+    alert(`${email} submitted`);
   }
 
   return (
@@ -30,22 +29,9 @@ function RegisterForm(): JSX.Element {
       </header>
       <main className={styles.registerForm__main}>
         <form className={styles.registerForm__form} onSubmit={handleSubmit}>
-          <LabeledInput
-            label="First Name"
-            placeholder="First Name"
-            type="text"
-            value={firstName}
-            onChange={setFirstName}
-            required
-          />
-          <LabeledInput
-            label="Last Name"
-            placeholder="Last Name"
-            type="text"
-            value={lastName}
-            onChange={setLastName}
-            required
-          />
+          <div className={styles.backbutton}>
+            <Backbutton />
+          </div>
           <LabeledInput
             label="Email"
             placeholder="Email"
@@ -63,21 +49,11 @@ function RegisterForm(): JSX.Element {
             onChange={setPassword}
             required
           />
-
-          <LabeledInput
-            label="Confirm Password"
-            placeholder="Password again"
-            type="password"
-            value={confirmPassword}
-            onChange={setConfirmPassword}
-            required
-          />
         </form>
       </main>
-      <Button>Register</Button>
-      <a href="http://localhost:3000/login" className={styles.registerLink}>
-        Already have an account?
-      </a>
+      <Link to="/home">
+        <Button>Login</Button>
+      </Link>
     </div>
   );
 }

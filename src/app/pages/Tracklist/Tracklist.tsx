@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Track } from '../../../types';
+import Backbutton from '../../components/Backbutton/Backbutton';
 import { Trackcard } from '../../components/Trackcard(tracklist)/Trackcard-tracklist.stories';
 import styles from './Tracklist.module.css';
 
@@ -28,6 +29,9 @@ function Tracklist(): JSX.Element {
   return (
     <>
       <div>
+        <div className={styles.backbutton}>
+          <Backbutton />
+        </div>
         <div className={styles.pulseImg}>
           <img className={styles.topImg} src="/topImg.jpg" />
         </div>

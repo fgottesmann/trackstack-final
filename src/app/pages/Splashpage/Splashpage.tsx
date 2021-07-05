@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import styles from './Splashpage.module.css';
 
 function Splashpage(): JSX.Element {
+  const history = useHistory();
+
+  useEffect(() => {
+    setTimeout(() => {
+      history.push('/register');
+    }, 3000);
+  }, []);
   return (
     <div className={styles.splash}>
       <main>

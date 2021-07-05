@@ -28,6 +28,11 @@ html {
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
   color: inherit;
+  color: var(--primary-color);
+  text-shadow: 4px 2px 4px #000;
+}
+
+a:focus {
+  outline: 0;
 }

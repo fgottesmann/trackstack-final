@@ -29,6 +29,7 @@
   text-decoration: none;
   color: var(--primary-color);
   margin: auto;
+  padding-bottom: 10%;
 }
 
 .registerForm::-webkit-scrollbar {
@@ -44,9 +45,8 @@
   place-self: center;
 }
 
-.registerLink {
-  justify-content: center;
-  display: grid;
-  margin-top: 1.5em;
-  margin-bottom: 1em;
+.backbutton {
+  position: absolute;
+  top: 3%;
+  left: 5%;
 }
